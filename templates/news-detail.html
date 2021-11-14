@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Blog Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+               
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5" >
+          <div class="container" style="margin-left: 350px;">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="{{ url_for('static',filename='images/blog1.jpg') }}" class="img-responsive" alt="">
+                              </div>
+                              <h3>Do I Still Need a Pulse Oximeter?</h3>
+                              <p>
+                                   It’s fair to say that the novel coronavirus pandemic has changed the way people shop—and also the items they shop for. There has been a shortage of things one might expect: toilet paper, disinfectant wipes, and thermometers. But, there are other—more surprising—items like yoga mats, yeast, and, more recently, pulse oximeters. So, what, exactly, is a pulse oximeter? It’s an electronic device that clips onto a patient’s finger to measure heart rate and oxygen saturation in his or her red blood cells—the device is useful in assessing patients with lung disease. Pulse oximeters started to fly off store (and online) shelves when people learned that low oxygen saturation levels can be a sign of COVID-19. The logic is that shortness of breath, a symptom of the disease, may not be easy—or even possible—for a person to reasonably self-assess. What’s more, doctors report that some COVID-19 patients suddenly develop a condition called “silent hypoxia,” where people look and feel comfortable—and don’t notice any shortness of breath—but their oxygen levels are dangerously low. It happens to patients both in the hospital and at home, but it is a particular problem in the latter case because the symptom may indicate severe COVID-19-related pneumonia, requiring a ventilator. That’s why some people may want or need to monitor their oxygen saturation levels at home..</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+ 
+     <!-- FOOTER -->
+     <footer style="margin-top:0;" data-stellar-background-ratio="7">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2021 Predicto Health </p>
+                              </div>  
+                        </div>
+                         <div class="col-md-4 col-sm-6">
+                                   <div class="copyright-text"> 
+                                        <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                       <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                   </div> 
+                         </div>
+                         
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/magnific-popup-options.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+

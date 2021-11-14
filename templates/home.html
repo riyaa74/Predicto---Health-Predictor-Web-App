@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Predicto</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='tooplate-style.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a  href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a style="font-size: 15px;" href="#top" class="smoothScroll">Home</a></li>
+                         <li><a style="font-size: 15px;" href="#about" class="smoothScroll">About Us</a></li>
+                         <li><a style="font-size: 15px;" href="#team" class="smoothScroll">Blogs</a></li>
+                         <li><a style="font-size: 15px;" href="#news" class="smoothScroll">Services</a></li>  <!--ADD DROPDOWN HERE -->
+                         <li><a style="font-size: 15px;" href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li class="appointment-btn"><a style="font-size: 15px;" href="#appointment">Make an appointment</a></li>
+                         <li><a href="{{ url_for('profile') }}" class="smoothScroll"><i class="fas fa-address-card" style="font-size: 25px;"></i></a></li>
+
+                    </ul>
+               </div>
+
+          </div>
+
+     </section>
+
+     {% if message %}
+          <script>
+               alert("Please Enter Valid Data")
+          </script>
+    {% endif %}
+    
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first" style="background-image: url(static/images/slide3.jpg);">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Make your life Easier and Happier</h3>
+                                             <h1>Unlocking the Power of ML in Healthcare</h1>
+                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Our Blogs</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second" style="background-image: url(static/images/slider2.jpg);">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Your AI Doctor at the Comfort of Your Home</h3>
+                                             <h1>Automatic Health Diagnostics</h1>
+                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-third" style="background-image: url(static/images/slide2.jpg);">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Developed by a Team of Budding Computer Scientists</h3>
+                                             <h1>Best Quality of Service</h1>
+                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Our Services</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about" style="background: url('static/images/new1about-bg.jpg') no-repeat top center;">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your Online<br> Health Predictor</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s" >
+                                   <p style="color:rgb(44, 37, 37)">Predicto is an intelligent tool for Automatic Disease prediction made for you.We provide automatic diagnosis for a wide range of diseases , in addition to this we also have a symptom checking facility available for health checkup at the comfprt of your homes !</p>
+                                   <p style="color:rgb(44, 37, 37)">Each time you go through it and add your diagnosis or symptom, we enhance personalized health check-up adjusted to your state. It is possible thanks to our AI-based diagnostic engine connected with our meticulous base of medical knowledge.</p>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- Blogs -->
+     <section id="team" data-stellar-background-ratio="1" style="background-color: black;">
+          <div class="container" >
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h1 class="wow fadeInUp" data-wow-delay="0.1s" style="margin-left: 450px; margin-bottom: 60px;margin-top: 20px; color:white;">Blogs</h1>
+                         </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+ 
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <a href="{{ url_for('news_detail') }}">
+                                   <img src="{{ url_for('static',filename='images/blog1.jpg') }}" class="img-responsive" alt="">
+                              </a>
+
+                                   <div class="team-info">
+                                        <h3><a href="{{ url_for('news_detail') }}">Do I Still Need a Pulse Oximeter?</a></h3>
+                                        <p>-Priyam Shah</p>
+                                   </div>
+
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <a href="{{ url_for('news_detail') }}">
+                                   <img src="{{ url_for('static',filename='images/blog2.jpg') }}" class="img-responsive" alt="">
+                              </a>
+
+                                   <div class="team-info">
+                                        <h3><a href="{{ url_for('news_detail') }}">Information you need about your child's health</a></h3>
+                                        <p>-Rishabh Tulshyan</p>
+                                   </div>
+
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <a href="{{ url_for('news_detail') }}">
+                                   <img src="{{ url_for('static',filename='images/blog3.jpg') }}" class="img-responsive" alt="">
+                              </a>
+
+                                   <div class="team-info">
+                                        <h3><a href="{{ url_for('news_detail') }}">Medical Medium Anti-Bug Cleanse</a></h3>
+                                        <p>-Aaryan Sarnaik</p>
+                                   </div>
+
+                         </div>
+                    </div>                    
+               </div>
+          </div>
+     </section>
+
+     <!-- Services -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h1 style="color:black;">Our Services</h1>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="{{ url_for('maleria_prediction') }}">
+                                   <img src="static/images/Malaria.jfif" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('maleria_prediction') }}">Maleria</a></h3>
+
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="{{ url_for('pneumonia_prediction') }}">
+                                   <img src="static/images/pnemonia.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('pneumonia_prediction') }}">Pneumonia</a></h3>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="{{ url_for('lung_cancer_prediction') }}">
+                                   <img src="static/images/lung cancer.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('lung_cancer_prediction') }}">Lung Cancer</a></h3>
+                              </div>
+                         </div>
+                    </div>    
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="{{ url_for('breast_cancer_prediction') }}">
+                                   <img src="static/images/breastcancer.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('breast_cancer_prediction') }}">Breast Cancer</a></h3>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row" style="padding-top: 20px;">
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="{{ url_for('diabetes_prediction') }}">
+                                   <img src="static/images/diabetes.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('diabetes_prediction') }}">Diabetes</a></h3>
+
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="{{ url_for('heart_disease_prediction') }}">
+                                   <img src="static/images/heart disease.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('heart_disease_prediction') }}">Heart Disease</a></h3>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="{{ url_for('kidney_disease_prediction') }}">
+                                   <img src="static/images/kidney disease.jpeg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('kidney_disease_prediction') }}">Kidney Disease</a></h3>
+
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="{{ url_for('liver_disease_prediction') }}">
+                                   <img src="static/images/liver disease.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="{{ url_for('liver_disease_prediction') }}">Liver Disease</a></h3>   
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="col-md-12 col-sm-12">
+                    <!-- SECTION TITLE -->
+                    <div class="section-title1 wow fadeInUp" data-wow-delay="0.1s" >
+                         <h2 style="color:black;">Symptom Checker</h2>
+                    </div>
+               </div>
+
+               <!-- <div class="row mx-auto"  style="padding:20px;">
+                    <div class="col-md-4 col-sm-6 mx-auto" style="text-align: center;"></div>
+                    <div class="col-md-4 col-sm-6 mx-auto" style="text-align: center;">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="AllDiseasePrediction.html">
+                                   <img src="static/images/disease.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="AllDiseasePrediction.html"> Predict Disease</a></h3>
+                              </div>
+                         </div>
+                    </div>
+
+               </div> -->
+               <center><div class="row mx-auto"  style="padding:20px;">
+          <div class="col-md-3 col-sm-6" style="text-align: center;margin-left:400px;">
+                     <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                         <a href="{{ url_for('AllDiseasePrediction') }}">
+                              <img src="static/images/disease.jpg" class="img-responsive" alt="" >
+                         </a>
+                         <div class="news-info">
+                              <h3><a href="{{ url_for('AllDiseasePrediction') }}">Predict Disease</a></h3>   
+                         </div>
+                    </div>
+               </div>
+          </div></center>
+     </section>
+
+     
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section style="background-color: lightgray;" id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <!-- <div class="col-md-6 col-sm-6">
+                         <img src="images/appointment-image.jpg" class="img-responsive" alt="">
+                    </div> -->
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" role="form" method="post" action="{{ url_for('home') }}">
+
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s" style="margin-left: 70px;">
+                                   <h2>   Make an appointment</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Select Date</label>
+                                        <input type="date" name="date" value="" class="form-control">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="select">Select Department</label>
+                                        <select class="form-control" name="department">
+                                             <option>General Health</option>
+                                             <option>Heart Care</option>
+                                             <option>Kidney Care</option>
+                                             <option>Liver Care</option>
+                                             <option>Pnemonia Care</option>
+                                             <option>Malaria Care</option>
+                                             <option>Cancer Care</option>
+                                             <option>Diabetes Care</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                        <label for="Message">Additional Message</label>
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                   </div>
+                              </div>
+                        </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- GOOGLE MAP -->
+     <section id="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.948927199152!2d72.83535271471393!3d19.109896355872557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b888ae67fd%3A0xe0b9538d623ac5d2!2sMukesh%20Patel%20School%20Of%20Technology%20Management%20%26%20Engineering!5e0!3m2!1sen!2sin!4v1634658925684!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>           
+     <!-- FOOTER -->
+     <footer style="margin-top:0;" data-stellar-background-ratio="7">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2021 Predicto Health </p>
+                              </div>  
+                        </div>
+                         <div class="col-md-4 col-sm-6">
+                                   <div class="copyright-text"> 
+                                        <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                       <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                   </div> 
+                         </div>
+                         
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="{{ url_for('static',filename='jquery.js') }}"></script>
+     <script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='jquery.sticky.js') }}"></script>
+     <script src="{{ url_for('static',filename='jquery.stellar.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='wow.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='smoothscroll.js') }}"></script>
+     <script src="{{ url_for('static',filename='owl.carousel.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='custom.js') }}"></script>
+
+     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+</body>
+</html>

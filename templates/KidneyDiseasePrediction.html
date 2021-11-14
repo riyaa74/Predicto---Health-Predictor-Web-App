@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="static/images/kidney disease.jpeg" class="img-responsive" alt="">
+                              </div>
+                              <h3>Kidney Disease</h3>
+                              <p>Chronic kidney disease, also called chronic kidney failure, involves a gradual loss of kidney function. Your kidneys filter wastes and excess fluids from your blood, which are then removed in your urine. Advanced chronic kidney disease can cause dangerous levels of fluid, electrolytes and wastes to build up in your body.
+
+                              In the early stages of chronic kidney disease, you might have few signs or symptoms. You might not realize that you have kidney disease until the condition is advanced.
+                              
+                              Treatment for chronic kidney disease focuses on slowing the progression of kidney damage, usually by controlling the cause. But, even controlling the cause might not keep kidney damage from progressing. Chronic kidney disease can progress to end-stage kidney failure, which is fatal without artificial filtering (dialysis) or a kidney transplant. </p>
+                              <blockquote>Chronic kidney disease (CKD) is a condition characterized by a gradual loss of kidney function over time. </blockquote>
+                              <p><b>Various Symptoms of Kidney Disease are:</b></p>
+
+                              <li>Nausea
+                              <li>Vomiting
+                              <li>Loss of appetite
+                              <li>Fatigue and weakness
+                              <li>Sleep problems
+                              <li>Urinating more or less
+                              <li>Decreased mental sharpness
+                              <li>Muscle cramps
+                              <li>Swelling of feet and ankles
+                              <li>Dry, itchy skin
+                              <li>High blood pressure (hypertension) that's difficult to control
+                              <li>Shortness of breath, if fluid builds up in the lungs
+                              <li>Chest pain, if fluid builds up around the lining of the heart
+                              
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>About the Prediction</h4>
+                                   <p>Here we are predicting the chances of you having Kidney Disease based on various factors like age, rbc,bp etc.
+                                        If you are diagnosed with Kidney Disease , Book an appointment with our doctor immediately </p>
+
+                              </div>
+
+                              <div class="recent-post">
+                                <h4>Other Diseases</h4>
+
+                                     <div class="media">
+                                          <div class="media-object pull-left">
+                                               <a href="{{ url_for('diabetes_prediction') }}"><img src="static/images/diabetes.jpg" class="img-responsive" alt=""></a>
+                                          </div>
+                                          <div class="media-body">
+                                               <h4 class="media-heading"><a href="#">Diabetes Prediction</a></h4>
+                                          </div>
+                                     </div>
+
+                                     <div class="media">
+                                          <div class="media-object pull-left">
+                                               <a href="{{ url_for('heart_disease_prediction') }}"><img src="static/images/heart disease.jpg" class="img-responsive" alt=""></a>
+                                          </div>
+                                          <div class="media-body">
+                                               <h4 class="media-heading"><a href="#">Heart Disease Prediction</a></h4>
+                                          </div>
+                                     </div>
+                              </div>
+
+
+                              <!-- <div class="news-ads sidebar-ads">
+                                   <h4>Sidebar Banner Ad</h4>
+                              </div> -->
+
+                              <div class="news-tags">
+                                   <h4>Tags</h4>
+                                        <li><a href="#">Health</a></li>
+                                        <li><a href="#">Consultant</a></li>
+                                        <li><a href="#">Medical</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li><a href="#">Urinary System</a></li>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+     <div class="row" style="margin-bottom: 125px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <center><h2>Kidney Disease Predictor</h2></center>
+            <div class="card card-body" style="border: 2px solid black; border-radius:7px;">
+                <form action="{{ url_for('predictPage') }}" method="POST">
+                    <div class="row">
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="age" placeholder="age">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="bp" placeholder="bp">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="al" placeholder="al">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="su" placeholder="su">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="rbc" placeholder="rbc">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="pc" placeholder="pc">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="pcc" placeholder="pcc">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="ba" placeholder="ba">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="bgr" placeholder="bgr">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="bu" placeholder="bu">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="sc" placeholder="sc">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="pot" placeholder="pot">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="wc" placeholder="wc">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="htn" placeholder="htn">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="dm" placeholder="dm">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="cad" placeholder="cad">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="pe" placeholder="pe">
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="form-group">
+                                 <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="ane" placeholder="ane">
+                             </div>
+                         </div>
+                     </div>
+                     <input type="submit" class="btn btn-info btn-block" value="Predict">
+                 </form>
+             </div>
+         </div>
+         <div class="col-md-2"></div>
+     </div>
+     
+
+ 
+      <!-- FOOTER -->
+      <footer style="margin-top:0;" data-stellar-background-ratio="7">
+        <div class="container">
+             <div class="row">
+                  <div class="col-md-12 col-sm-12 border-top">
+                       <div class="col-md-4 col-sm-6">
+                            <div class="copyright-text"> 
+                                 <p>Copyright &copy; 2021 Predicto Health </p>
+                            </div>  
+                      </div>
+                       <div class="col-md-4 col-sm-6">
+                                 <div class="copyright-text"> 
+                                      <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                     <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                 </div> 
+                       </div>
+                       
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/magnific-popup-options.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+

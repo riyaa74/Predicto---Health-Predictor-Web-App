@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <!-- MENU -->
+    <section class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+
+             <div class="navbar-header">
+                  <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                       <span class="icon icon-bar"></span>
+                       <span class="icon icon-bar"></span>
+                       <span class="icon icon-bar"></span>
+                  </button>
+
+                  <!-- lOGO TEXT HERE -->
+                  <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+             </div>
+
+        </div>
+   </section>
+
+    <div class="row"  style="margin-bottom:10%; margin-top: 10%;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><h2><center>Sorry, You are infected! Please Book an Appointment with our Doctor.</center></h2></div>
+            {% elif pred == 0 %}
+                <div class="card card-body alert alert-success"><h2><center>Great! You are HEALTHY.</center></h2></div>
+            {% else %}
+                <div class="card card-body alert alert-danger"><h2><center>There are chances that you have {{ pred }}!</center></h2></div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+     <!-- FOOTER -->
+     <footer style="margin-top:0;" data-stellar-background-ratio="7">
+        <div class="container">
+             <div class="row">
+                  <div class="col-md-12 col-sm-12 border-top">
+                       <div class="col-md-4 col-sm-6">
+                            <div class="copyright-text"> 
+                                 <p>Copyright &copy; 2021 Predicto Health </p>
+                            </div>  
+                      </div>
+                       <div class="col-md-4 col-sm-6">
+                                 <div class="copyright-text"> 
+                                      <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                     <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                 </div> 
+                       </div>
+                       
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
+    
+</body>
+
