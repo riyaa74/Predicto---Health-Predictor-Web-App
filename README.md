@@ -13,7 +13,7 @@ Disease Prediction is a system which helps in predicting the diseases based on t
 
 ## SCOPE
 This web app is developed using Flask Web Framework and MySQL Database. The models used to predict the diseases are trained on large Datasets. All the links for datasets and the python notebooks used for model creation are mentioned later. The webapp can predict following Diseases:
-Diabetes
+Diabetes <br>
 Breast Cancer
 Heart Disease
 Kidney Disease
