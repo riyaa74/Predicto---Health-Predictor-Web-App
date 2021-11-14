@@ -21,6 +21,19 @@ Malaria<br>
 Pneumonia<br>
 Disease based on Symptoms <br>
 
+## DESCRIPTION OF MODULES
+Login Page: It allows the user to login and also allows him to register to our website.<br>
+Home Page: It is the landing page after the user logs in. It contains the following sections:<br>
+About Us:Information about Predicto<br>
+Contact Us :<br>
+Blog Page hyperlinks<br>
+Services :hyperlinks to 8 different disease prediction pages and 1 symptom prediction page<br> 
+Appointments:book an appointment with a doctor from this page.  <br>
+Blog Page: This contains blogs about advancements in the medical field.<br>
+Profile Page: This page shows the information of the registered users as well their prediction history.<br>
+ 
+
+
 ## Teh Stack used<br>
 PYTHON: Used for writing the prediction models .<br>
 FLASK: Used for the backend of the website.<br>
