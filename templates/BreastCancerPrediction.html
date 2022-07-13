@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="static/images/breastcancer.jpg" class="img-responsive" alt="">
+                              </div>
+                              <h3>Breast Cancer</h3>
+                              <p>  Breast cancer is cancer that forms in the cells of the breasts.
+                                   After skin cancer, breast cancer is the most common cancer diagnosed in women in the United States. Breast cancer can occur in both men and women, but it's far more common in women.
+                                   Substantial support for breast cancer awareness and research funding has helped created advances in the diagnosis and treatment of breast cancer. Breast cancer survival rates have increased, and the number of deaths associated with this disease is steadily declining, largely due to factors such as earlier detection, a new personalized approach to treatment and a better understanding of the disease.. </p>
+
+                              <blockquote>A cancer that forms in the cells of the breasts.</blockquote>
+                              <p><b>Various Symptoms of Breast Cancer are:</b></p>
+                              
+                              <ul>
+                                   <li>Change in the size, shape or appearance of a breast</li>
+                                   <li>Changes to the skin over the breast, such as dimpling</li>
+                                   <li>A newly inverted nipple</li>
+                                   <li>A breast lump or thickening that feels different from the surrounding tissue</li>
+                                   <li>Peeling, scaling, crusting or flaking of the pigmented area of skin surrounding the nipple (areola) or breast skin</li>
+                                   <li>Redness or pitting of the skin over your breast, like the skin of an orange</li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>About the Prediction</h4>
+                                   <p>Here we are predicting the chances of you having Breast Cancer based the inofrmation recived in your xray stating various dimensions and attributes of the suspected breast </p>
+
+                              </div>
+
+                              <div class="recent-post">
+                                   <h4>Recent News</h4>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="https://www.cancer.org/cancer/breast-cancer/about/what-is-breast-cancer.html"><img src="static/images/news-image.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">What is Breast Cancer</a></h4>
+                                             </div>
+                                        </div>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="#"><img src="static/images/news-image.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">About Amazing Technology</a></h4>
+                                             </div>
+                                        </div>
+                              </div>
+
+                              <div class="news-categories">
+                                   <h4>Categories</h4>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Health</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Cnacer</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Glandular System</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Consultant</a></li>
+                              </div>
+
+
+                              <div class="news-tags">
+                                   <h4>Tags</h4>
+                                        <li><a href="#">Health</a></li>
+                                        <li><a href="#">Consultant</a></li>
+                                        <li><a href="#">Medical</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li><a href="#">Cancer</a></li>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+    
+     <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+          <center><h2>Breast Cancer Predictor</h2></center>
+          <div class="card card-body" style="border: 2px solid black;border-radius:7px;">
+               <form action="{{ url_for('predictPage') }}" method="POST">
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="radius_mean" placeholder="radius_mean">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="texture_mean" placeholder="texture_mean">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="perimeter_mean" placeholder="perimeter_mean">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="area_mean" placeholder="area_mean">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="smoothness_mean" placeholder="smoothness_mean">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="compactness_mean" placeholder="compactness_mean">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="concavity_mean" placeholder="concavity_mean">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="concave_points_mean" placeholder="concave_points_mean">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="symmetry_mean" placeholder="symmetry_mean">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="radius_se" placeholder="radius_se">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="perimeter_se" placeholder="perimeter_se">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="area_se" placeholder="area_se">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="compactness_se" placeholder="compactness_se">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="concavity_se" placeholder="concavity_se">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="concave_points_se" placeholder="concave_points_se">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="fractal_dimension_se" placeholder="fractal_dimension_se">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="radius_worst" placeholder="radius_worst">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="texture_worst" placeholder="texture_worst">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="perimeter_worst" placeholder="perimeter_worst">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="area_worst" placeholder="area_worst">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="smoothness_worst" placeholder="smoothness_worst">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="compactness_worst" placeholder="compactness_worst">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="concavity_worst" placeholder="concavity_worst">
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="concave_points_worst" placeholder="concave_points_worst">
+                              </div>
+                         </div>
+                    </div>
+     
+                    <div class="row">
+                         <div class="col-md-6">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="symmetry_worst" placeholder="symmetry_worst">
+                              </div>
+                         </div>
+                         <div class="col-md-6">
+                              <div class="form-group">
+                              <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="fractal_dimension_worst" placeholder="fractal_dimension_worst">
+                              </div>
+                         </div>
+                    </div>
+                    
+     
+                    <input type="submit" class="btn btn-info btn-block" value="Predict" style="background-color:#1da1f2;">
+               </form>
+          </div>
+          </div>
+          <div class="col-md-2"></div>
+     </div>
+ 
+ 
+      <!-- FOOTER -->
+      <footer style="margin-top:0;" data-stellar-background-ratio="7">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2021 Predicto Health </p>
+                              </div>  
+                        </div>
+                         <div class="col-md-4 col-sm-6">
+                                   <div class="copyright-text"> 
+                                        <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                       <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                   </div> 
+                         </div>
+                         
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/magnific-popup-options.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="static/images/diabetes.jpg" class="img-responsive" alt="">
+                              </div>
+                              <h3>Diabetes</h3>
+                              <p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy. Sometimes your body doesn’t make enough—or any—insulin or doesn’t use insulin well. Glucose then stays in your blood and doesn’t reach your cells.Over time, having too much glucose in your blood can cause health problems. Although diabetes has no cure, you can take steps to manage your diabetes and stay healthy. </p>
+                              <blockquote>Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.” These terms suggest that someone doesn’t really have diabetes or has a less serious case, but every case of diabetes is serious.</blockquote>
+                              <p><b>Various Symptoms of Diabetes are:</b></p>
+                              
+                              <ul>
+                                   <li>Urinating often.</li>
+                                   <li>Feeling very thirsty.</li>
+                                   <li>Extreme fatigue.</li>
+                                   <li>Blurry vision.</li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>About the Prediction</h4>
+                                   <p>Here we are predicting the chances of you having diabetes based on various factors like BMI, Blood sugar level etc.
+                                        If you are diagnosed with Diabetes , Book an appointment with our doctor immediately </p>
+
+                              </div>
+
+                              <div class="recent-post">
+                                   <h4>Other Diseases</h4>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('heart_disease_prediction') }}"><img src="static/images/heart disease.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Heart Disease Prediction</a></h4>
+                                             </div>
+                                        </div>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('kidney_disease_prediction') }}"><img src="static/images/kidney disease.jpeg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Kidney Disease Prediction</a></h4>
+                                             </div>
+                                        </div>
+                              </div>
+
+
+                              <!-- <div class="news-ads sidebar-ads">
+                                   <h4>Sidebar Banner Ad</h4>
+                              </div> -->
+
+                              <div class="news-tags">
+                                   <h4>Tags</h4>
+                                        <li><a href="#">Health</a></li>
+                                        <li><a href="#">Consultant</a></li>
+                                        <li><a href="#">Medical</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li><a href="#">Endocrine</a></li>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <center><h2>Diabetes Predictor</h2></center>
+            <div class="card card-body" style="border: 2px solid black; border-radius:7px;">
+                <form action="{{ url_for('predictPage') }}" method="POST">
+                    <div class="form-group">
+                        <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black; border:0px;" class="form-control" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="age" placeholder="Age (years) eg. 34">
+                    </div>
+
+            		<input type="submit" class="btn btn-info btn-block" value="Predict" style="background-color:#1da1f2;">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+
+ 
+     <!-- FOOTER -->
+     <footer style="margin-top:0;" data-stellar-background-ratio="7">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2021 Predicto Health </p>
+                              </div>  
+                        </div>
+                         <div class="col-md-4 col-sm-6">
+                                   <div class="copyright-text"> 
+                                        <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                       <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                   </div> 
+                         </div>
+                         
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/magnific-popup-options.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+

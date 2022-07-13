@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+               
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="static/images/Malaria.jfif" class="img-responsive" alt="">
+                              </div>
+                              <h3>Malaria</h3>
+                              <p>Malaria is a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans. People who get malaria are typically very sick with high fevers, shaking chills, and flu-like illness. Four kinds of malaria parasites infect humans: Plasmodium falciparum, P. vivax, P. ovale, and P. malariae. In addition, P. knowlesi, a type of malaria that naturally infects macaques in Southeast Asia, also infects humans, causing malaria that is transmitted from animal to human (“zoonotic” malaria). P. falciparum is the type of malaria that is most likely to result in severe infections and if not promptly treated, may lead to death. Although malaria can be a deadly disease, illness and death from malaria can usually be prevented. </p>
+                              <blockquote>A disease caused by a plasmodium parasite, transmitted by the bite of infected mosquitoes.</blockquote>
+                              <p><b>Various Symptoms of Malaria are:</b></p>
+                              
+                              <ul>
+                                   Symptoms of malaria include fever and flu-like illness, including shaking chills, headache, muscle aches, and tiredness. Nausea, vomiting, and diarrhea may also occur. Malaria may cause anemia and jaundice (yellow coloring of the skin and eyes) because of the loss of red blood cells. If not promptly treated, the infection can become severe and may cause kidney failure, seizures, mental confusion, coma, and death.
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>About the Prediction</h4>
+                                   <p>Here we are predicting the chances of you having Malaria based on parasitized or unaffected cell image.
+                                        If you are diagnosed with Malaria , Book an appointment with our doctor immediately </p>
+
+                              </div>
+
+                              <div class="recent-post">
+                                   <h4>Other Diseases</h4>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('pneumonia_prediction') }}"><img src="static/images/diabetes.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Pnemonia Prediction</a></h4>
+                                             </div>
+                                        </div>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('liver_disease_prediction') }}"><img src="static/images/liver disease.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Liver Disease Prediction</a></h4>
+                                             </div>
+                                        </div>
+                              </div>
+
+
+                              <!-- <div class="news-ads sidebar-ads">
+                                   <h4>Sidebar Banner Ad</h4>
+                              </div> -->
+
+                              <div class="news-tags">
+                                   <h4>Tags</h4>
+                                        <li><a href="#">Health</a></li>
+                                        <li><a href="#">Consultant</a></li>
+                                        <li><a href="#">Medical</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li><a href="#">Infection</a></li>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+     <script>
+          function readURL(input) {
+                  if (input.files && input.files[0]) {
+                      var reader = new FileReader();
+      
+                      reader.onload = function (e) {
+                          $('#blah')
+                              .attr('src', e.target.result)
+                              .width(500)
+                              .height(500);
+                      };
+      
+                      reader.readAsDataURL(input.files[0]);
+                  }
+              }
+
+          var loadFile = function(event) {
+               var output = document.getElementById('output');
+               output.src = URL.createObjectURL(event.target.files[0]);
+               output.onload = function() {
+                    URL.revokeObjectURL(output.src) // free memory
+                    }
+               };
+     </script>
+
+      
+
+     <div class="row"  style="margin-bottom: 300px; margin-top:100px;">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+              <center><h2>Malaria Predictor</h2></center>
+              <div class="card card-body">
+                  <center><h3>Please upload a .JPG image of the cell</h3></center>
+                  <form action="{{ url_for('malariapredictPage')}}" method="POST" enctype="multipart/form-data">
+
+                      <center>
+                         <input onchange="readURL(this) ,loadFile(event);" type="file" accept="image/*" name="image" placeholder="Upload Image">
+                         <br>
+                         <img id="output" width="500" height="500">
+                         <br>
+                         <br>
+                         <br>
+                         <input class="btn btn-info" type="submit">
+                         <br>
+                         <br>
+
+                      </center>
+                  </form>
+              </div>
+          </div>
+          <div class="col-md-3"></div>
+      </div>
+      
+      {% if message %}
+          <script>
+               alert("Please Upload an Image")
+          </script>
+    {% endif %}
+
+ 
+      <!-- FOOTER -->
+      <footer style="margin-top:0;" data-stellar-background-ratio="7">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2021 Predicto Health </p>
+                              </div>  
+                        </div>
+                         <div class="col-md-4 col-sm-6">
+                                   <div class="copyright-text"> 
+                                        <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                       <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                   </div> 
+                         </div>
+                         
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/magnific-popup-options.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+

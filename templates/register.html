@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+		<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+	</head>
+	<body style="background-color: lightgray;">
+
+		<section class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+  
+				 <div class="navbar-header">
+					  <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						   <span class="icon icon-bar"></span>
+						   <span class="icon icon-bar"></span>
+						   <span class="icon icon-bar"></span>
+					  </button>
+  
+					  <!-- lOGO TEXT HERE -->
+					  <a class="navbar-brand">Predicto Health Center</a>
+  
+				 </div>
+  
+			</div>
+	    </section>
+
+		<div class="register col-sm-6" style="margin-left: 25%; height: 530px;">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}">Login</a>
+				<a href="{{ url_for('register') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('register') }}" method="post" autocomplete="off">
+
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<br>
+				<br>
+
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="Email" id="email" required>
+
+                <label for="age">
+					<i class="fas fa-baby-carriage"></i>
+				</label>
+				<input type="number" name="age" placeholder="Age" id="age" required>
+
+                <label for="gender">
+					<i class="fas fa-transgender"></i>
+				</label>
+                <select name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="height">
+					<i class="fas fa-male"></i>
+				</label>
+				<input type="number" name="height" placeholder="Height in cm" id="height" required>
+
+                <label for="weight">
+					<i class="fas fa-weight"></i>
+				</label>
+				<input type="number" name="weight" placeholder="Weight in kgs" id="weight" required>
+
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+
+		<script src="{{ url_for('static',filename='jquery.js') }}"></script>
+		<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='jquery.sticky.js') }}"></script>
+		<script src="{{ url_for('static',filename='jquery.stellar.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='wow.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='smoothscroll.js') }}"></script>
+		<script src="{{ url_for('static',filename='owl.carousel.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='custom.js') }}"></script>
+	</body>
+</html>

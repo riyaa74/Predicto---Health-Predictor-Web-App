@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="static/images/lung cancer.jpg" class="img-responsive" alt="">
+                              </div>
+                              <h3>Lung Cancer</h3>
+                              <p>Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale.
+
+                                   Lung cancer is the leading cause of cancer deaths worldwide.
+                                   
+                                   People who smoke have the greatest risk of lung cancer, though lung cancer can also occur in people who have never smoked. The risk of lung cancer increases with the length of time and number of cigarettes you've smoked. If you quit smoking, even after smoking for many years, you can significantly reduce your chances of developing lung cancer. </p>
+                              <blockquote>A cancer that begins in the lungs and most often occurs in people who smoke.</blockquote>
+                              <p><b>Various Symptoms of Lung Cancer are:</b></p>
+                              
+                              <ul>
+                                   A new cough that doesn't go away
+                                   Coughing up blood, even a small amount
+                                   Shortness of breath
+                                   Chest pain
+                                   Hoarseness
+                                   Losing weight without trying
+                                   Bone pain
+                                   Headache
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>About the Prediction</h4>
+                                   <p>Here we are predicting the chances of you having Lung Cancer based on various factors like allergies, cough, smoking wtc.
+                                        If you are diagnosed with Lung Cancer , Book an appointment with our doctor immediately </p>
+
+                              </div>
+
+                              <div class="recent-post">
+                                   <h4>Other Diseases</h4>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('maleria_prediction') }}"><img src="static/images/Malaria.jfif" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Malaria Prediction</a></h4>
+                                             </div>
+                                        </div>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('liver_disease_prediction') }}"><img src="static/images/liver disease.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Liver Disease Prediction</a></h4>
+                                             </div>
+                                        </div>
+                              </div>
+
+
+                              <!-- <div class="news-ads sidebar-ads">
+                                   <h4>Sidebar Banner Ad</h4>
+                              </div> -->
+
+                              <div class="news-tags">
+                                   <h4>Tags</h4>
+                                        <li><a href="#">Health</a></li>
+                                        <li><a href="#">Consultant</a></li>
+                                        <li><a href="#">Medical</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li><a href="#">Respiratory</a></li>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+     <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <center><h2>Lung Cancer Predictor</h2></center>
+            <div class="card card-body" style="border: 2px solid black; border-radius:7px;">
+                <form action="{{ url_for('predictPage') }}" method="POST">
+                    <div class="form-group">
+                        <input style="border-bottom: 1px solid black; border:0px;" class="form-control" type="text" name="GENDER" placeholder="1 for Male , 0 for Female">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black; border:0px;" class="form-control" type="text" name="AGE" placeholder="Enter your age">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="SMOKING" placeholder="SMOKING ,Enter 1 for YES , 0 for NO">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="YELLOW FINGERS" placeholder="YELLOW FINGERS ,Enter 1 for YES , 0 for NO">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="ANXIETY" placeholder="ANXIETY, Enter 1 for YES , 0 for NO">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="PEER PRESSURE" placeholder="PEER PRESSURE, Enter 1 for YES , 0 for NO">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="CHRONIC DISEASE" placeholder="CHRONIC DISEASE, Enter 1 for YES , 0 for NO">
+                    </div>
+            		<div class="form-group">
+                        <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="FATIGUE" placeholder="FATIGUE, Enter 1 for YES , 0 for NO">
+                    </div>
+                    <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="ALLERGY" placeholder="ALLERGY, Enter 1 for YES , 0 for NO">
+                     </div>
+                     <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="WHEEZING" placeholder="WHEEZING, Enter 1 for YES , 0 for NO">
+                     </div>
+                     <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="ALCOHOL CONSUMING" placeholder="ALCOHOL CONSUMING, Enter 1 for YES , 0 for NO">
+                     </div>
+                     <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="COUGHING" placeholder="COUGHING ,Enter 1 for YES , 0 for NO">
+                     </div>
+                     <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="SHORTNESS OF BREATH" placeholder="SHORTNESS OF BREATH, Enter 1 for YES , 0 for NO">
+                     </div>
+                     <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="SWALLOWING DIFFICULTY" placeholder="SWALLOWING DIFFICULTY, Enter 1 for YES , 0 for NO">
+                     </div>
+                     <div class="form-group">
+                         <input style="border-bottom: 2px solid black;border:0px;" class="form-control" type="text" name="CHEST PAIN" placeholder="CHEST PAIN, Enter 1 for YES , 0 for NO">
+                     </div>
+
+            		<input type="submit" class="btn btn-info btn-block" value="Predict" style="background-color:#1da1f2;">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+ 
+      <!-- FOOTER -->
+      <footer style="margin-top:0;" data-stellar-background-ratio="7">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2021 Predicto Health </p>
+                              </div>  
+                        </div>
+                         <div class="col-md-4 col-sm-6">
+                                   <div class="copyright-text"> 
+                                        <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                       <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                       <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                   </div> 
+                         </div>
+                         
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/magnific-popup-options.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+

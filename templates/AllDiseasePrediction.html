@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Services Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='custom-style.css')}}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{{ url_for('home') }}" class="navbar-brand">Predicto Health Center</a>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!--  DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="static/images/disease.jpg" class="img-responsive" alt="">
+                              </div>
+                              <h3>Disease Prediction Using Symptoms</h3>
+                              <blockquote>Enter all the Symptoms you are facing right now</blockquote>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>About the Prediction</h4>
+                                   <p>Here we are predicting the probable disease you might have based on the symptoms that you are experiencing  </p>
+
+                              </div>
+
+                              <div class="recent-post">
+                                   <h4>Other Diseases</h4>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('heart_disease_prediction') }}"><img src="static/images/heart disease.jpg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Heart Disease Prediction</a></h4>
+                                             </div>
+                                        </div>
+
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{{ url_for('kidney_disease_prediction') }}"><img src="static/images/kidney disease.jpeg" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="#">Kidney Disease Prediction</a></h4>
+                                             </div>
+                                        </div>
+                              </div>
+
+
+                              <!-- <div class="news-tags">
+                                   <h4>Tags</h4>
+                                        <li><a href="#">Health</a></li>
+                                        <li><a href="#">Consultant</a></li>
+                                        <li><a href="#">Medical</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li><a href="#">Endocrine</a></li>
+                              </div> -->
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     
+
+
+
+     <form action="{{ url_for('diseasePredictor') }}" method="POST" id="symptom_form">
+        <div class="container">
+            <label for="exampleDataList" class="form-label" style="margin: 1%;">Select Your Symptoms:</label>
+            <input class="form-control"  list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="margin: 1%;">
+            <datalist id="datalistOptions">
+                {% for symptom in symptom_list %}
+                    <option>{{ symptom }}</option>
+                {% endfor %}
+            </datalist>
+            <input class="btn btn-primary" type="button" value="Add Symptom!" onclick="onInput()" style="margin: 1%;">
+        </div>
+
+        <div class="container news-tags" id="symptom_list_span">
+        </div> 
+        <input type="hidden" id="final_symptom_input" name="symptoms">
+
+        <input type="submit" onclick="onFinalClick()" class="btn btn-info btn-block me-auto" value="Predict" style="max-height: 300px;">
+     </form>
+     
+</section>     
+        
+ 
+      <!-- FOOTER -->
+      <footer style="margin-top:0;" data-stellar-background-ratio="7">
+        <div class="container">
+             <div class="row">
+                  <div class="col-md-12 col-sm-12 border-top">
+                       <div class="col-md-4 col-sm-6">
+                            <div class="copyright-text"> 
+                                 <p>Copyright &copy; 2021 Predicto Health </p>
+                            </div>  
+                      </div>
+                       <div class="col-md-4 col-sm-6">
+                                 <div class="copyright-text"> 
+                                      <!-- <p>Contact Us on <i class="fab fa-instagram"></i>  </p> -->
+                                     <a href="https://www.instagram.com/riyaa74/?hl=en" class="smoothScroll"><i class="fab fa-instagram" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://github.com/riyaa74" class="smoothScroll"><i class="fab fa-github" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://www.facebook.com/" class="smoothScroll"><i class="fab fa-facebook" style="font-size:26px; padding:5%"></i> </i></a>
+                                     <a href="https://twitter.com/?lang=en" class="smoothScroll"><i class="fab fa-twitter" style="font-size:26px; padding:5%"></i> </i></a>
+                                 </div> 
+                       </div>
+                       
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
+
+     <!-- SCRIPTS -->
+     
+     <script>
+         let l1 = [];
+       function onInput() {
+        var symptom = document.getElementById('exampleDataList').value;
+        var symptom_div = document.getElementById('symptom_list_span');
+        var final_symptom_input = document.getElementById('final_symptom_input');
+        var new_a = document.createElement('a');
+        var new_li = document.createElement('li');
+        new_a.innerHTML = symptom;
+        new_a.style = "padding: 12px;margin:1px;font-size:medium;";
+        new_li.appendChild(new_a);
+        symptom_div.appendChild(new_li);
+        l1.push(symptom);
+        final_symptom_input.value = JSON.stringify(l1);
+        console.log(final_symptom_input);
+        document.getElementById('exampleDataList').value="";
+      }
+     </script>
+     <script src="{{ url_for('static',filename='jquery.js') }}"></script>
+     <script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='jquery.sticky.js') }}"></script>
+     <script src="{{ url_for('static',filename='jquery.stellar.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='wow.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='smoothscroll.js') }}"></script>
+     <script src="{{ url_for('static',filename='owl.carousel.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='custom.js') }}"></script>
+
+</body>
+</html>
+
+
+
+

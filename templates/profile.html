@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    th, td {
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr{background-color: #f2f2f2;}
+</style>
+<h2>Profile Page</h2>
+<div>
+    <p style="font-size: larger;">Your account details are below:</p>
+    <table border=1>
+        <tr>
+            <td>Username:</td>
+            <td>{{ account['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>{{ account['password'] }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ account['email'] }}</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>{{ account['age'] }}</td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>{{ account['gender'] }}</td>
+        </tr>
+        <tr>
+            <td>Height:</td>
+            <td>{{ account['height'] }}</td>
+        </tr>
+        <tr>
+            <td>Weight:</td>
+            <td id="yolo">{{ account['weight'] }}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <p style="font-size: larger;">Prediction History:</p>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Disease Name</th>
+            <th>Prediction Date</th>
+            <th>Prediction</th>
+        </tr>
+        {% for item in prediction_history %}
+            <tr>
+                <td>{{item.prediction_id}}</td>
+                <td>{{item.disease_name}}</td>
+                <td>{{item.prediction_date}}</td>
+                <td>{{item.prediction}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
