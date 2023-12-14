@@ -1,5 +1,5 @@
 # MPSTME Placement
-Project for MPSTME students for the subject Web Programming.
+Project for MPSTME students for the subject Web Programming. See Master Branch for code
 
 ## Name<br>
 Predicto Heath App.
